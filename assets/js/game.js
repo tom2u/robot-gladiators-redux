@@ -89,5 +89,4 @@ for (var i = 0; i < enemyNames.length; i++) {
     window.alert("You have lost your robot in battle! Game Over!");
     break;
   }
-
 }
