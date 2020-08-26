@@ -173,8 +173,20 @@ var randomNumber = function (min, max) {
   return value;
 };
 
+// function to set name
+var getPlayerName = function () {
+  var name = "";
+
+  while (name === "" || name === null) {
+    name = prompt("What is your robot's name?");
+  }
+
+  console.log("Your robot's name is " + name);
+  return name;
+};
+
 var playerInfo = {
-  name: window.prompt("What is your robot's name?"),
+  name: getPlayerName(),
   health: 100,
   attack: 10,
   money: 10,
@@ -202,24 +214,23 @@ var playerInfo = {
     else {
       window.alert("You don't have enough money!");
     }
-  };
+  }
+}
 
-  var enemyInfo = [
-    {
-      name: "Roborto",
-      attack: randomNumber(10, 14)
-    },
-    {
-      name: "Amy Android",
-      attack: randomNumber(10, 14)
-    },
-    {
-      name: "Robo Trumble",
-      attack: randomNumber(10, 14)
-    }
-  ];
+var enemyInfo = [
+  {
+    name: "Roborto",
+    attack: randomNumber(10, 14)
+  },
+  {
+    name: "Amy Android",
+    attack: randomNumber(10, 14)
+  },
+  {
+    name: "Robo Trumble",
+    attack: randomNumber(10, 14)
+  }
+];
 
-
-
-  // start the game when the page loads
-  startGame();
+// start the game when the page loads
+startGame();
